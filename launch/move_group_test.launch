@@ -1,0 +1,5 @@
+<launch>
+<!--   <group ns="korus"> -->
+    <node pkg="moveit_sandbox" type="move_group_test" name="move_group_test"/>
+<!--   </group> -->
+</launch>
