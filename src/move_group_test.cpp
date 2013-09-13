@@ -31,6 +31,7 @@ int main(int argc, char **argv)
   // specifying a goal pose
   ROS_INFO_STREAM("Setting pose goal for end effector '" << group.getEndEffectorLink() << "'.");
   geometry_msgs::Pose goal_pose;
+  // the pose given by the values below is valid
   goal_pose.position.x = 0.5;
   goal_pose.position.y = 0.0;
   goal_pose.position.z = 0.5;
@@ -42,7 +43,9 @@ int main(int argc, char **argv)
   ROS_INFO_STREAM(goal_pose);
 
   group.setPoseTarget(goal_pose);
-  group.setGoalTolerance(1e-5);
+  group.setGoalPositionTolerance(1e-5);
+  group.setGoalOrientationTolerance(1e-5);
+  group.setPlanningTime(1.0);
   if (group.move())
   {
     ROS_INFO_STREAM("Moving done.");
