@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(moveit_sandbox)
 
-find_package(catkin REQUIRED COMPONENTS moveit_ros_planning_interface)
+find_package(catkin REQUIRED COMPONENTS geometry_msgs
+                                        moveit_ros_planning_interface)
 
 catkin_package()
 
