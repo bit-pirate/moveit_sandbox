@@ -43,8 +43,8 @@ int main(int argc, char **argv)
   ROS_INFO_STREAM(goal_pose);
 
   group.setPoseTarget(goal_pose);
-  group.setGoalPositionTolerance(1e-5);
-  group.setGoalOrientationTolerance(1e-5);
+  group.setGoalPositionTolerance(0.001);
+  group.setGoalOrientationTolerance(0.001);
   group.setPlanningTime(1.0);
   if (group.move())
   {

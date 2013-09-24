@@ -1,0 +1,6 @@
+<launch>
+  <group ns="korus">
+	  <!-- Object info server -->
+	  <include file="$(find object_recognition_ros)/launch/object_information_server.launch"/>
+  </group>
+</launch>
